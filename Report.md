@@ -8,7 +8,7 @@ The basic idea of DDPG is to have both an Actor network and a Critic Network tha
 
 ## Training Results
 
-
+<div style="text-align:center"><img src="/TrainingScores.gif" /></div>
 
 ## Model Implementation
 
