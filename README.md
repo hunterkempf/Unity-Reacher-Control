@@ -12,6 +12,7 @@ https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Learning-Enviro
 
 <div style="text-align:center"><img src="/Untrained.gif" /></div>
 
+Before Training the agent takes random actions and may sometimes connect with a target by random chance but most of the time the targets are not reached.
 
 ## After Training
 
