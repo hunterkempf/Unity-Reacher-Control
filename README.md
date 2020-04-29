@@ -1,4 +1,4 @@
-# Unity-Reacher-Control
+# Unity Reacher Control
 
 <div style="text-align:center"><img src="https://github.com/Unity-Technologies/ml-agents/raw/master/docs/images/reacher.png" /></div>
 
