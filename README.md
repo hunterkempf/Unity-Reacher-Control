@@ -24,6 +24,10 @@ Before Training the agent takes random actions and may sometimes connect with a 
 
 As you can see after training the model achieves pretty good results and is able to track the target in most instances. Part of what makes this a non trivial problem is that there are many different speeds and directions that the target may move. 
 
+## How to Install Requirements
+
+
+
 # Future Improvements
 
 I used the DDPG algorithm to solve this problem which has the benefit of being more simple to understand and code but it does not allow individual agents to learn on their own and thus wastes some of the potential of the 20 arm environment. 
