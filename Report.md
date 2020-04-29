@@ -8,7 +8,9 @@ The basic idea of DDPG is to have both an Actor network and a Critic Network tha
 
 ## Training Results
 
-<div style="text-align:center"><img src="/TrainingScores.gif" /></div>
+<div style="text-align:center"><img src="/TrainingScores.png" /></div>
+
+Since this model was trained with 20 agents all running the same exact code I included for each episode of training a Max, Min and average as well as the rolling 100 episode average. My implementation took 215 episodes for the 100 episode rolling average to meet the threshold of 30 which on my computer took 86.93 minutes to run.
 
 ## Model Implementation
 
@@ -22,6 +24,6 @@ State Vector (33) --> fully connected layer (33->128) --> relu (128 -> 128) + ad
 
 ## Future Improvements
 
-I used the DDPG algorithm to solve this problem which has the benefit of being more simple to understand and code but it does not allow individual agents to learn on their own and thus wastes some of the potential of the 20 arm environment.
+I used the DDPG algorithm to solve this problem which has the benefit of being more simple to understand and code but it does not allow individual agents to learn on their own and thus wastes some of the potential of the 20 arm environment. To improve this algorithm I would explore a dynamic weight for the soft update parameter TAU (larger at the beginning and smaller at the end) to potentially learn faster. I also think changing the model number of connected layers and neurons could yeild improved performance.
 
 Algorithms like PPO, A3C, and D4PG that use multiple (non-interacting, parallel) copies of the same agent to distribute the task of gathering experience would be a really interesting future improvement to this project.
