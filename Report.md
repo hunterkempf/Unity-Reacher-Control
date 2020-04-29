@@ -2,7 +2,23 @@
 
 ## Algorithm chosen
 
+For this Project I chose the DDPG algorithm outlined in the following paper https://arxiv.org/abs/1509.02971. 
+
+The basic idea of DDPG is to have both an Actor network and a Critic Network that allows one network to focus on the Q-values (Critic) and the other network to focus on the State to Action mapping. 
+
+## Training Results
+
+
+
 ## Model Implementation
+
+Actor (3 fully connected layers first 2 with relu activations and the last with tanh activation):
+
+State Vector (33) --> fully connected layer (33->128) --> relu (128 -> 128) --> fully connected layer (128 -> 128) --> relu (128 -> 128) --> fully connected layer (128 -> 4) --> tanh (4 -> 4) --> Action Vector (4)
+
+Critic (3 fully connected layers first 2 with relu activations and the last linear activation):
+
+State Vector (33) --> fully connected layer (33->128) --> relu (128 -> 128) + add in the action values -->  fully connected layer (132->128) --> relu (128 -> 128) --> fully connected layer (128 -> 1) --> Expected Reward Vector (1)
 
 ## Future Improvements
 
