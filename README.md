@@ -26,6 +26,8 @@ As you can see after training the model achieves pretty good results and is able
 
 ## How to Install Requirements
 
+This Project requires Python 3.6.3 due to the tensorflow 1.7.1 requirement in the requirements.txt file. Additionally it requires the Unity Environment and ml-agents package installed https://github.com/Unity-Technologies/ml-agents
+
 
 
 # Future Improvements
