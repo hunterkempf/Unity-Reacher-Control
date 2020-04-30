@@ -27,6 +27,7 @@ State Vector (33) --> fully connected layer (33->128) --> relu (128 -> 128) + ad
 Actor and Critic with 128 --> 64 neurons Took 577 Episodes and 221.09 minutes to reach the threshold of 30
 
 
+Actor and Critic with 64 --> 64 neurons Took ___ Episodes and ___ minutes to reach the threshold of 30
 
 
 ## Future Improvements
