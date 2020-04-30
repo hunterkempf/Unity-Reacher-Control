@@ -54,14 +54,14 @@ class Agent():
         self.hard_update(self.actor_target, self.actor_local)
         self.hard_update(self.critic_target, self.critic_local)
 
-    def step(self, states, actions, rewards, next_states, dones, timestep):
+    def step(self, states, actions, rewards, next_states, dones, t_step):
         """Save experience in replay memory, and use random sample from buffer to learn."""
         # Save experience / reward
         for state, action, reward, next_state, done in zip(states, actions, rewards, next_states, dones):
             self.memory.add(state, action, reward, next_state, done)
 
         # Learn, if enough samples are available in memory
-        if len(self.memory) > BATCH_SIZE and timestep % 20 == 0:
+        if len(self.memory) > BATCH_SIZE and t_step % 20 == 0:
             for _ in range(10):
                 experiences = self.memory.sample()
                 self.learn(experiences, GAMMA)
