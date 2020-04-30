@@ -22,6 +22,13 @@ Critic (3 fully connected layers first 2 with relu activations and the last line
 
 State Vector (33) --> fully connected layer (33->128) --> relu (128 -> 128) + add in the action values -->  fully connected layer (132->128) --> relu (128 -> 128) --> fully connected layer (128 -> 1) --> Expected Reward Vector (1)
 
+## Other Attempted Model Implementations
+
+Actor and Critic with 128 --> 64 neurons Took 577 Episodes and 221.09 minutes to reach the threshold of 30
+
+
+
+
 ## Future Improvements
 
 I used the DDPG algorithm to solve this problem which has the benefit of being more simple to understand and code but it does not allow individual agents to learn on their own and thus wastes some of the potential of the 20 arm environment. To improve this algorithm I would explore a dynamic weight for the soft update parameter TAU (larger at the beginning and smaller at the end) to potentially learn faster. I also think changing the model number of connected layers and neurons could yeild improved performance.
