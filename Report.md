@@ -10,26 +10,25 @@ The basic idea of DDPG is to have both an Actor network and a Critic Network tha
 
 <div style="text-align:center"><img src="/TrainingScores.png" /></div>
 
-Since this model was trained with 20 agents all running the same exact code I included for each episode of training a Max, Min and average as well as the rolling 100 episode average. My implementation took 215 episodes for the 100 episode rolling average to meet the threshold of 30 which on my computer took 86.93 minutes to run.
+Since this model was trained with 20 agents all running the same exact code I included for each episode of training a Max, Min and average as well as the rolling 100 episode average. My implementation took 148 episodes for the 100 episode rolling average to meet the threshold of 30 which on my computer took 65.45 minutes to run.
 
 ## Model Implementation
 
 Actor (3 fully connected layers first 2 with relu activations and the last with tanh activation):
 
-State Vector (33) --> fully connected layer (33->128) --> relu (128 -> 128) --> fully connected layer (128 -> 128) --> relu (128 -> 128) --> fully connected layer (128 -> 4) --> tanh (4 -> 4) --> Action Vector (4)
+State Vector (33) --> fully connected layer (33->256) --> relu (256 -> 256) --> fully connected layer (256 -> 256) --> relu (256 -> 256) --> fully connected layer (256 -> 4) --> tanh (4 -> 4) --> Action Vector (4)
 
 Critic (3 fully connected layers first 2 with relu activations and the last linear activation):
 
-State Vector (33) --> fully connected layer (33->128) --> relu (128 -> 128) + add in the action values -->  fully connected layer (132->128) --> relu (128 -> 128) --> fully connected layer (128 -> 1) --> Expected Reward Vector (1)
+State Vector (33) --> fully connected layer (33->256) --> relu (256 -> 256) + add in the action values -->  fully connected layer (256->256) --> relu (256 -> 256) --> fully connected layer (256 -> 1) --> Expected Reward Vector (1)
 
 ## Other Attempted Model Implementations
 
-Actor and Critic with 128 --> 64 neurons Took 577 Episodes and 221.09 minutes to reach the threshold of 30
-
-
 Actor and Critic with 64 --> 64 neurons Never Converged after 330 episodes and started falling down
 
-Actor and Critic with 256 --> 256 neurons Took ___ Episodes and ___ minutes to reach the threshold of 30
+Actor and Critic with 128 --> 64 neurons Took 577 Episodes and 221.09 minutes to reach the threshold of 30
+
+Actor and Critic with 128 --> 128 neurons Took 215 Episodes and 86.93 minutes to reach the threshold of 30
 
 ## Future Improvements
 
