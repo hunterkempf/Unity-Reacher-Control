@@ -4,7 +4,7 @@
 
 For this Project I chose the DDPG (Deep Deterministic Policy Gradients) algorithm outlined in the following paper https://arxiv.org/abs/1509.02971. 
 
-The basic idea of DDPG is to have both an Actor network and a Critic Network that allows one network to focus on the Q-values (Critic) and the other network to focus on the State to Action mapping. 
+The basic idea of DDPG is to have both an Actor network and a Critic Network that allows one network to focus on the Q-values (Critic) and the other network to focus on the State to Action mapping (Actor). 
 
 ## Training Results
 
